@@ -23,6 +23,7 @@
 		26CEE63E26D159B900AEDC83 /* Fonts+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE63D26D159B900AEDC83 /* Fonts+Colors.swift */; };
 		26CEE64026D159DE00AEDC83 /* KNControlConstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE63F26D159DE00AEDC83 /* KNControlConstruction.swift */; };
 		26CEE64226D15A2300AEDC83 /* KNUIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE64126D15A2300AEDC83 /* KNUIButtonExtension.swift */; };
+		26CEE64426D15DB800AEDC83 /* KNTableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE64326D15DB800AEDC83 /* KNTableExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		26CEE63D26D159B900AEDC83 /* Fonts+Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fonts+Colors.swift"; sourceTree = "<group>"; };
 		26CEE63F26D159DE00AEDC83 /* KNControlConstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNControlConstruction.swift; sourceTree = "<group>"; };
 		26CEE64126D15A2300AEDC83 /* KNUIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUIButtonExtension.swift; sourceTree = "<group>"; };
+		26CEE64326D15DB800AEDC83 /* KNTableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNTableExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 		26CEE62A26D14ED900AEDC83 /* BasicKit */ = {
 			isa = PBXGroup;
 			children = (
+				26CEE64326D15DB800AEDC83 /* KNTableExtension.swift */,
 				26CEE64126D15A2300AEDC83 /* KNUIButtonExtension.swift */,
 				26CEE63D26D159B900AEDC83 /* Fonts+Colors.swift */,
 				26CEE63F26D159DE00AEDC83 /* KNControlConstruction.swift */,
@@ -315,6 +318,7 @@
 			files = (
 				26CEE63026D14ED900AEDC83 /* KNConstraints.swift in Sources */,
 				26CEE62F26D14ED900AEDC83 /* KNView+KNController.swift in Sources */,
+				26CEE64426D15DB800AEDC83 /* KNTableExtension.swift in Sources */,
 				26CEE64026D159DE00AEDC83 /* KNControlConstruction.swift in Sources */,
 				26CEE63826D152B700AEDC83 /* HomeController.swift in Sources */,
 				26CEE63A26D152DC00AEDC83 /* SearchController.swift in Sources */,
