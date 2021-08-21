@@ -23,16 +23,12 @@ class MainTabController: UITabBarController {
         
         var controllers: [UIViewController] = []
         let homeNavigationController = UINavigationController(rootViewController: homeController)
-        homeNavigationController.isNavigationBarHidden = true
-        controllers.append(homeNavigationController)
         controllers.append(homeNavigationController)
         
         let searchNavigationController = UINavigationController(rootViewController: searchController)
-        searchNavigationController.isNavigationBarHidden = true
         controllers.append(searchNavigationController)
         
         let activitiesNavigationController = UINavigationController(rootViewController: activitiesController)
-        activitiesNavigationController.isNavigationBarHidden = true
         controllers.append(activitiesNavigationController)
         
         viewControllers = controllers
