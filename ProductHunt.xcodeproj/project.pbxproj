@@ -17,6 +17,12 @@
 		26CEE62F26D14ED900AEDC83 /* KNView+KNController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE62C26D14ED900AEDC83 /* KNView+KNController.swift */; };
 		26CEE63026D14ED900AEDC83 /* KNConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE62D26D14ED900AEDC83 /* KNConstraints.swift */; };
 		26CEE63626D150AA00AEDC83 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE63526D150AA00AEDC83 /* MainTabController.swift */; };
+		26CEE63826D152B700AEDC83 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE63726D152B700AEDC83 /* HomeController.swift */; };
+		26CEE63A26D152DC00AEDC83 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE63926D152DC00AEDC83 /* SearchController.swift */; };
+		26CEE63C26D1530500AEDC83 /* ActivitiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE63B26D1530500AEDC83 /* ActivitiesController.swift */; };
+		26CEE63E26D159B900AEDC83 /* Fonts+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE63D26D159B900AEDC83 /* Fonts+Colors.swift */; };
+		26CEE64026D159DE00AEDC83 /* KNControlConstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE63F26D159DE00AEDC83 /* KNControlConstruction.swift */; };
+		26CEE64226D15A2300AEDC83 /* KNUIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE64126D15A2300AEDC83 /* KNUIButtonExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,12 @@
 		26CEE62C26D14ED900AEDC83 /* KNView+KNController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KNView+KNController.swift"; sourceTree = "<group>"; };
 		26CEE62D26D14ED900AEDC83 /* KNConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNConstraints.swift; sourceTree = "<group>"; };
 		26CEE63526D150AA00AEDC83 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		26CEE63726D152B700AEDC83 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		26CEE63926D152DC00AEDC83 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		26CEE63B26D1530500AEDC83 /* ActivitiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesController.swift; sourceTree = "<group>"; };
+		26CEE63D26D159B900AEDC83 /* Fonts+Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fonts+Colors.swift"; sourceTree = "<group>"; };
+		26CEE63F26D159DE00AEDC83 /* KNControlConstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNControlConstruction.swift; sourceTree = "<group>"; };
+		26CEE64126D15A2300AEDC83 /* KNUIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUIButtonExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +144,9 @@
 		26CEE62A26D14ED900AEDC83 /* BasicKit */ = {
 			isa = PBXGroup;
 			children = (
+				26CEE64126D15A2300AEDC83 /* KNUIButtonExtension.swift */,
+				26CEE63D26D159B900AEDC83 /* Fonts+Colors.swift */,
+				26CEE63F26D159DE00AEDC83 /* KNControlConstruction.swift */,
 				26CEE62B26D14ED900AEDC83 /* KNGeneral.swift */,
 				26CEE62C26D14ED900AEDC83 /* KNView+KNController.swift */,
 				26CEE62D26D14ED900AEDC83 /* KNConstraints.swift */,
@@ -162,6 +177,9 @@
 			isa = PBXGroup;
 			children = (
 				26CEE63526D150AA00AEDC83 /* MainTabController.swift */,
+				26CEE63726D152B700AEDC83 /* HomeController.swift */,
+				26CEE63926D152DC00AEDC83 /* SearchController.swift */,
+				26CEE63B26D1530500AEDC83 /* ActivitiesController.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -297,9 +315,15 @@
 			files = (
 				26CEE63026D14ED900AEDC83 /* KNConstraints.swift in Sources */,
 				26CEE62F26D14ED900AEDC83 /* KNView+KNController.swift in Sources */,
+				26CEE64026D159DE00AEDC83 /* KNControlConstruction.swift in Sources */,
+				26CEE63826D152B700AEDC83 /* HomeController.swift in Sources */,
+				26CEE63A26D152DC00AEDC83 /* SearchController.swift in Sources */,
+				26CEE63E26D159B900AEDC83 /* Fonts+Colors.swift in Sources */,
 				26CEE63626D150AA00AEDC83 /* MainTabController.swift in Sources */,
 				26CEE62E26D14ED900AEDC83 /* KNGeneral.swift in Sources */,
+				26CEE64226D15A2300AEDC83 /* KNUIButtonExtension.swift in Sources */,
 				26CEE5FB26D14C3600AEDC83 /* AppDelegate.swift in Sources */,
+				26CEE63C26D1530500AEDC83 /* ActivitiesController.swift in Sources */,
 				26CEE5FD26D14C3600AEDC83 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
