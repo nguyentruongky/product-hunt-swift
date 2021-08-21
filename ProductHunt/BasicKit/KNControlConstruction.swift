@@ -94,6 +94,7 @@ extension UIImageView {
                      contentMode: UIView.ContentMode = .scaleAspectFit){
         let image = UIImage(named: imageName)
         self.init(image: image)
+        self.contentMode = contentMode
         translatesAutoresizingMaskIntoConstraints = false
     }
     
