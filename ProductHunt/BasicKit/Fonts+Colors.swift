@@ -15,7 +15,18 @@ extension UIFont {
     }
     
     static func font(_ name: String, size: CGFloat) -> UIFont {
-        guard let font = UIFont(name: name, size: size) else { return UIFont.boldSystemFont(ofSize: size) }
+        guard let font = UIFont(name: name, size: size) else {
+            if name.lowercased().contains("regular") {
+                return UIFont.systemFont(ofSize: size)
+            } else {
+                return UIFont.boldSystemFont(ofSize: size)
+            }
+        }
         return font
     }
+}
+
+extension UIColor {
+    static let color_201F24 = UIColor(hex: "#201F24")
+    static let color_292A2E = UIColor(hex: "#292A2E")
 }
