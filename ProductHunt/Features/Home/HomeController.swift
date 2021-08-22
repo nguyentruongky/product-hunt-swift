@@ -3,8 +3,14 @@
 import UIKit
 
 class HomeController: KNController {
+    lazy var interactor = HomeInteractor(controller: self)
     lazy var tableView = UITableView(cells: [ProductItemCell.self], source: self)
-    var datasource = [Int]()
+    override var shouldGetDataViewDidLoad: Bool { true }
+    var datasource = [Product]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
 
     override func setupView() {
         view.backgroundColor = .color_292A2E
@@ -12,6 +18,10 @@ class HomeController: KNController {
         setupTableView()
     }
 
+    override func getData() {
+        interactor.loadData()
+    }
+    
     func setupNavigationBar() {
         navigationController?.navigationBar.barTintColor = .color_201F24
         navigationController?.navigationBar.isTranslucent = false
@@ -43,68 +53,34 @@ class HomeController: KNController {
     }
 }
 
+extension HomeController {
+    func updateDatasource(_ products: [Product]) {
+        datasource.append(contentsOf: products)
+    }
+    
+    func showError(message: String) {
+        let vc = UIAlertController(title: "Oops", message: message, preferredStyle: .alert)
+        vc.addAction(UIAlertAction(title: "OK", style: .destructive))
+        present(vc, animated: true)
+    }
+}
+
 extension HomeController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return datasource.count
-        return 100
+        return datasource.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ProductItemCell = tableView.dequeue(at: indexPath)
-//        cell.setData(datasource[indexPath.row])
+        cell.setData(datasource[indexPath.row])
         return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 100
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-    }
-}
-
-class ProductItemCell: KNTableCell {
-    let iconImageView = UIImageView()
-    let titleLabel = UILabel(font: .main(size: 15), color: .white)
-    let descriptionLabel = UILabel(font: .main(size: 15), color: UIColor(hex: "#88898C"), numberOfLines: 2)
-    let voteLabel = UILabel(font: .main(.bold, size: 15), color: .white)
-    override func setupView() {
-        contentView.backgroundColor = .color_292A2E
-        let textStackView = makeTextStackView()
-        let line = UIView(background: UIColor(hex: "#414045"))
-        let voteView = createVoteView()
-
-        let stackView = UIStackView()
-        stackView.spacing = 16
-        stackView.alignment = .top
-
-        stackView.addViews(iconImageView, textStackView, line, voteView)
-        iconImageView.square(edge: 66)
-        line.verticalSuperview()
-        line.width(1)
-        voteView.width(60)
-
-        contentView.addSubviews(views: stackView)
-        stackView.horizontalSuperview(space: 16)
-        stackView.centerYToSuperview()
-
-        iconImageView.backgroundColor = .green
-        titleLabel.text = "Mooze"
-        descriptionLabel.text = "Custom overlays to personalize your Zoom settings"
-        voteLabel.text = "10002"
-    }
-
-    private func makeTextStackView() -> UIStackView {
-        let stackView = UIStackView(axis: .vertical, distributon: .fill, alignment: .fill, space: 8)
-        stackView.addViews(titleLabel, descriptionLabel)
-        return stackView
-    }
-
-    private func createVoteView() -> UIStackView {
-        let upIcon = UIImageView(imageName: "up")
-        let stackView = UIStackView(axis: .vertical, distributon: .fill, alignment: .center, space: 8)
-        stackView.addViews(upIcon, voteLabel)
-        return stackView
     }
 }

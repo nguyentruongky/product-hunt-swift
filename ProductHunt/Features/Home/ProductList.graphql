@@ -1,0 +1,17 @@
+query productList {
+  posts {
+    edges {
+    	node {
+      	id
+        name
+        description
+        isVoted
+        votesCount
+        thumbnail {
+          url
+        }
+      }
+    }
+  }
+  
+}
