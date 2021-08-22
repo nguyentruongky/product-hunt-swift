@@ -1,0 +1,51 @@
+query productDetail {
+  post(id: "309281") {
+    collections(first: 3) {
+      edges {
+        node {
+          name
+        }
+      }
+    }
+    id
+    name
+    description
+    tagline
+    thumbnail {
+      url
+    }
+    isVoted
+    media {
+      type
+      url
+      videoUrl
+    }
+    featuredAt
+    user {
+      ...UserFragment
+    }
+    makers {
+      ...UserFragment
+    }
+    comments(last: 3) {
+      totalCount
+      edges {
+        cursor
+        node {
+          body
+          isVoted
+          user {
+            ...UserFragment
+          }
+        }
+      }
+    }
+  }
+}
+
+fragment UserFragment on User {
+  id
+  name
+  profileImage
+  headline
+}
