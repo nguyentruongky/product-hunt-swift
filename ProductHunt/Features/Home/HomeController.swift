@@ -13,7 +13,7 @@ class HomeController: KNController {
     }
 
     override func setupView() {
-        view.backgroundColor = .color_292A2E
+        view.backgroundColor = .bg
         setupNavigationBar()
         setupTableView()
     }

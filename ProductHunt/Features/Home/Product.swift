@@ -15,7 +15,7 @@ struct Product {
         votesCount = raw.votesCount
         id = raw.id
         name = raw.name
-        description = raw.description
+        description = raw.tagline
         thumbnailUrl = raw.thumbnail?.url
     }
 }

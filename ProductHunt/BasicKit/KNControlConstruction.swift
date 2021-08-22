@@ -118,12 +118,12 @@ extension UITextField {
 
 extension UIStackView {
     convenience init(axis: NSLayoutConstraint.Axis = .vertical,
-                     distributon: UIStackView.Distribution = .equalSpacing,
+                     distribution: UIStackView.Distribution? = nil,
                      alignment: UIStackView.Alignment = .center,
                      space: CGFloat = 16) {
         self.init()
         self.axis = axis
-        self.distribution = distributon
+        self.distribution = distribution
         self.alignment = alignment
         self.spacing = space
         translatesAutoresizingMaskIntoConstraints = false

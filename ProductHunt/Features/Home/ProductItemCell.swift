@@ -9,7 +9,7 @@ class ProductItemCell: KNTableCell {
     let voteLabel = UILabel(font: .main(.bold, size: 15), color: .white)
     override func setupView() {
         iconImageView.clipsToBounds = true
-        contentView.backgroundColor = .color_292A2E
+        contentView.backgroundColor = .bg
         let textStackView = makeTextStackView()
         let line = UIView(background: UIColor(hex: "#414045"))
         let voteView = createVoteView()
@@ -35,14 +35,14 @@ class ProductItemCell: KNTableCell {
     }
     
     private func makeTextStackView() -> UIStackView {
-        let stackView = UIStackView(axis: .vertical, distributon: .fill, alignment: .fill, space: 8)
+        let stackView = UIStackView(axis: .vertical, distribution: .fill, alignment: .fill, space: 8)
         stackView.addViews(titleLabel, descriptionLabel)
         return stackView
     }
     
     private func createVoteView() -> UIStackView {
         let upIcon = UIImageView(imageName: "up")
-        let stackView = UIStackView(axis: .vertical, distributon: .fill, alignment: .center, space: 8)
+        let stackView = UIStackView(axis: .vertical, distribution: .fill, alignment: .center, space: 8)
         stackView.addViews(upIcon, voteLabel)
         return stackView
     }
