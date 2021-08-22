@@ -25,7 +25,7 @@
 		26CEE64226D15A2300AEDC83 /* KNUIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE64126D15A2300AEDC83 /* KNUIButtonExtension.swift */; };
 		26CEE64426D15DB800AEDC83 /* KNTableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE64326D15DB800AEDC83 /* KNTableExtension.swift */; };
 		26CEE64726D1694200AEDC83 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 26CEE64626D1694200AEDC83 /* Apollo */; };
-		26CEE64B26D1BE5A00AEDC83 /* ProductList.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 26CEE64A26D1BE5A00AEDC83 /* ProductList.graphql */; };
+		26CEE64B26D1BE5A00AEDC83 /* GetProductListWorker.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 26CEE64A26D1BE5A00AEDC83 /* GetProductListWorker.graphql */; };
 		26CEE64D26D1BEDB00AEDC83 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 26CEE64C26D1BEDB00AEDC83 /* schema.json */; };
 		26CEE64F26D1C00000AEDC83 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE64E26D1C00000AEDC83 /* API.swift */; };
 		26CEE65126D1C02C00AEDC83 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE65026D1C02C00AEDC83 /* Network.swift */; };
@@ -78,7 +78,7 @@
 		26CEE63F26D159DE00AEDC83 /* KNControlConstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNControlConstruction.swift; sourceTree = "<group>"; };
 		26CEE64126D15A2300AEDC83 /* KNUIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUIButtonExtension.swift; sourceTree = "<group>"; };
 		26CEE64326D15DB800AEDC83 /* KNTableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNTableExtension.swift; sourceTree = "<group>"; };
-		26CEE64A26D1BE5A00AEDC83 /* ProductList.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProductList.graphql; sourceTree = "<group>"; };
+		26CEE64A26D1BE5A00AEDC83 /* GetProductListWorker.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GetProductListWorker.graphql; sourceTree = "<group>"; };
 		26CEE64C26D1BEDB00AEDC83 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		26CEE64E26D1C00000AEDC83 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		26CEE65026D1C02C00AEDC83 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -221,7 +221,7 @@
 				26CEE65926D1C68100AEDC83 /* HomeInteractor.swift */,
 				26CEE65326D1C2E100AEDC83 /* Product.swift */,
 				26CEE65726D1C65500AEDC83 /* ProductItemCell.swift */,
-				26CEE64A26D1BE5A00AEDC83 /* ProductList.graphql */,
+				26CEE64A26D1BE5A00AEDC83 /* GetProductListWorker.graphql */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -340,7 +340,7 @@
 			files = (
 				26CEE64D26D1BEDB00AEDC83 /* schema.json in Resources */,
 				26CEE60726D14C5300AEDC83 /* LaunchScreen.storyboard in Resources */,
-				26CEE64B26D1BE5A00AEDC83 /* ProductList.graphql in Resources */,
+				26CEE64B26D1BE5A00AEDC83 /* GetProductListWorker.graphql in Resources */,
 				26CEE60426D14C5300AEDC83 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

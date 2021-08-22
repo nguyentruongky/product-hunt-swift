@@ -8,11 +8,12 @@ public final class ProductListQuery: GraphQLQuery {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =
     """
-    query productList {
-      posts {
+    query productList($cursor: String) {
+      posts(after: $cursor) {
         __typename
         edges {
           __typename
+          cursor
           node {
             __typename
             id
@@ -32,7 +33,14 @@ public final class ProductListQuery: GraphQLQuery {
 
   public let operationName: String = "productList"
 
-  public init() {
+  public var cursor: String?
+
+  public init(cursor: String? = nil) {
+    self.cursor = cursor
+  }
+
+  public var variables: GraphQLMap? {
+    return ["cursor": cursor]
   }
 
   public struct Data: GraphQLSelectionSet {
@@ -40,7 +48,7 @@ public final class ProductListQuery: GraphQLQuery {
 
     public static var selections: [GraphQLSelection] {
       return [
-        GraphQLField("posts", type: .nonNull(.object(Post.selections))),
+        GraphQLField("posts", arguments: ["after": GraphQLVariable("cursor")], type: .nonNull(.object(Post.selections))),
       ]
     }
 
@@ -109,6 +117,7 @@ public final class ProductListQuery: GraphQLQuery {
         public static var selections: [GraphQLSelection] {
           return [
             GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+            GraphQLField("cursor", type: .nonNull(.scalar(String.self))),
             GraphQLField("node", type: .nonNull(.object(Node.selections))),
           ]
         }
@@ -119,8 +128,8 @@ public final class ProductListQuery: GraphQLQuery {
           self.resultMap = unsafeResultMap
         }
 
-        public init(node: Node) {
-          self.init(unsafeResultMap: ["__typename": "PostEdge", "node": node.resultMap])
+        public init(cursor: String, node: Node) {
+          self.init(unsafeResultMap: ["__typename": "PostEdge", "cursor": cursor, "node": node.resultMap])
         }
 
         public var __typename: String {
@@ -129,6 +138,16 @@ public final class ProductListQuery: GraphQLQuery {
           }
           set {
             resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        /// A cursor for use in pagination.
+        public var cursor: String {
+          get {
+            return resultMap["cursor"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "cursor")
           }
         }
 

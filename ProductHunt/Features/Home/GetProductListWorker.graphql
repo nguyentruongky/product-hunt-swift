@@ -1,8 +1,9 @@
-query productList {
-  posts {
+query productList($cursor: String) {
+  posts(after: $cursor) {
     edges {
-    	node {
-      	id
+      cursor
+      node {
+        id
         name
         description
         isVoted
@@ -13,5 +14,4 @@ query productList {
       }
     }
   }
-  
 }

@@ -19,9 +19,9 @@ class HomeController: KNController {
     }
 
     override func getData() {
-        interactor.loadData()
+        interactor.freshGetData()
     }
-    
+
     func setupNavigationBar() {
         navigationController?.navigationBar.barTintColor = .color_201F24
         navigationController?.navigationBar.isTranslucent = false
@@ -54,10 +54,14 @@ class HomeController: KNController {
 }
 
 extension HomeController {
+    func freshUpdateDatasource(_ products: [Product]) {
+        datasource = products
+    }
+
     func updateDatasource(_ products: [Product]) {
         datasource.append(contentsOf: products)
     }
-    
+
     func showError(message: String) {
         let vc = UIAlertController(title: "Oops", message: message, preferredStyle: .alert)
         vc.addAction(UIAlertAction(title: "OK", style: .destructive))
@@ -82,5 +86,14 @@ extension HomeController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let translation = scrollView.panGestureRecognizer.translation(in: scrollView.superview)
+        let isScrollingUp = translation.y < 0
+        let isReachingToEnd = scrollView.contentOffset.y + scrollView.frame.height < scrollView.contentSize.height - 100
+        if isScrollingUp && isReachingToEnd {
+            interactor.loadMoreData()
+        }
     }
 }
