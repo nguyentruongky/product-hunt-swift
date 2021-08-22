@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,17 @@
 		26CEE64026D159DE00AEDC83 /* KNControlConstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE63F26D159DE00AEDC83 /* KNControlConstruction.swift */; };
 		26CEE64226D15A2300AEDC83 /* KNUIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE64126D15A2300AEDC83 /* KNUIButtonExtension.swift */; };
 		26CEE64426D15DB800AEDC83 /* KNTableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE64326D15DB800AEDC83 /* KNTableExtension.swift */; };
+		26CEE64726D1694200AEDC83 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 26CEE64626D1694200AEDC83 /* Apollo */; };
+		26CEE64B26D1BE5A00AEDC83 /* ProductList.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 26CEE64A26D1BE5A00AEDC83 /* ProductList.graphql */; };
+		26CEE64D26D1BEDB00AEDC83 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 26CEE64C26D1BEDB00AEDC83 /* schema.json */; };
+		26CEE64F26D1C00000AEDC83 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE64E26D1C00000AEDC83 /* API.swift */; };
+		26CEE65126D1C02C00AEDC83 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE65026D1C02C00AEDC83 /* Network.swift */; };
+		26CEE65426D1C2E100AEDC83 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE65326D1C2E100AEDC83 /* Product.swift */; };
+		26CEE65626D1C4ED00AEDC83 /* GetProductListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE65526D1C4ED00AEDC83 /* GetProductListWorker.swift */; };
+		26CEE65826D1C65500AEDC83 /* ProductItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE65726D1C65500AEDC83 /* ProductItemCell.swift */; };
+		26CEE65A26D1C68100AEDC83 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE65926D1C68100AEDC83 /* HomeInteractor.swift */; };
+		26CEE65D26D1CA0F00AEDC83 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 26CEE65C26D1CA0F00AEDC83 /* Kingfisher */; };
+		26CEE65F26D1CA7F00AEDC83 /* KNUIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE65E26D1CA7F00AEDC83 /* KNUIImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +78,15 @@
 		26CEE63F26D159DE00AEDC83 /* KNControlConstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNControlConstruction.swift; sourceTree = "<group>"; };
 		26CEE64126D15A2300AEDC83 /* KNUIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUIButtonExtension.swift; sourceTree = "<group>"; };
 		26CEE64326D15DB800AEDC83 /* KNTableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNTableExtension.swift; sourceTree = "<group>"; };
+		26CEE64A26D1BE5A00AEDC83 /* ProductList.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProductList.graphql; sourceTree = "<group>"; };
+		26CEE64C26D1BEDB00AEDC83 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		26CEE64E26D1C00000AEDC83 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		26CEE65026D1C02C00AEDC83 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		26CEE65326D1C2E100AEDC83 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		26CEE65526D1C4ED00AEDC83 /* GetProductListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductListWorker.swift; sourceTree = "<group>"; };
+		26CEE65726D1C65500AEDC83 /* ProductItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemCell.swift; sourceTree = "<group>"; };
+		26CEE65926D1C68100AEDC83 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		26CEE65E26D1CA7F00AEDC83 /* KNUIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUIImageExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26CEE65D26D1CA0F00AEDC83 /* Kingfisher in Frameworks */,
+				26CEE64726D1694200AEDC83 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +143,7 @@
 				26CEE62A26D14ED900AEDC83 /* BasicKit */,
 				26CEE63226D1504800AEDC83 /* Configuration */,
 				26CEE63326D1505800AEDC83 /* Resources */,
+				26CEE65026D1C02C00AEDC83 /* Network.swift */,
 			);
 			path = ProductHunt;
 			sourceTree = "<group>";
@@ -146,6 +169,7 @@
 		26CEE62A26D14ED900AEDC83 /* BasicKit */ = {
 			isa = PBXGroup;
 			children = (
+				26CEE65E26D1CA7F00AEDC83 /* KNUIImageExtension.swift */,
 				26CEE64326D15DB800AEDC83 /* KNTableExtension.swift */,
 				26CEE64126D15A2300AEDC83 /* KNUIButtonExtension.swift */,
 				26CEE63D26D159B900AEDC83 /* Fonts+Colors.swift */,
@@ -160,6 +184,8 @@
 		26CEE63226D1504800AEDC83 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				26CEE64E26D1C00000AEDC83 /* API.swift */,
+				26CEE64C26D1BEDB00AEDC83 /* schema.json */,
 				26CEE5FA26D14C3600AEDC83 /* AppDelegate.swift */,
 				26CEE5FC26D14C3600AEDC83 /* SceneDelegate.swift */,
 				26CEE60826D14C5300AEDC83 /* Info.plist */,
@@ -180,11 +206,24 @@
 			isa = PBXGroup;
 			children = (
 				26CEE63526D150AA00AEDC83 /* MainTabController.swift */,
-				26CEE63726D152B700AEDC83 /* HomeController.swift */,
+				26CEE65226D1C2C100AEDC83 /* Home */,
 				26CEE63926D152DC00AEDC83 /* SearchController.swift */,
 				26CEE63B26D1530500AEDC83 /* ActivitiesController.swift */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		26CEE65226D1C2C100AEDC83 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				26CEE65526D1C4ED00AEDC83 /* GetProductListWorker.swift */,
+				26CEE63726D152B700AEDC83 /* HomeController.swift */,
+				26CEE65926D1C68100AEDC83 /* HomeInteractor.swift */,
+				26CEE65326D1C2E100AEDC83 /* Product.swift */,
+				26CEE65726D1C65500AEDC83 /* ProductItemCell.swift */,
+				26CEE64A26D1BE5A00AEDC83 /* ProductList.graphql */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +233,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26CEE62126D14C5B00AEDC83 /* Build configuration list for PBXNativeTarget "ProductHunt" */;
 			buildPhases = (
+				26CEE64826D1BC0A00AEDC83 /* Apollo */,
 				26CEE5F326D14C3600AEDC83 /* Sources */,
 				26CEE5F426D14C3600AEDC83 /* Frameworks */,
 				26CEE5F526D14C3600AEDC83 /* Resources */,
@@ -203,6 +243,10 @@
 			dependencies = (
 			);
 			name = ProductHunt;
+			packageProductDependencies = (
+				26CEE64626D1694200AEDC83 /* Apollo */,
+				26CEE65C26D1CA0F00AEDC83 /* Kingfisher */,
+			);
 			productName = ProductHunt;
 			productReference = 26CEE5F726D14C3600AEDC83 /* ProductHunt.app */;
 			productType = "com.apple.product-type.application";
@@ -274,6 +318,10 @@
 				Base,
 			);
 			mainGroup = 26CEE5EE26D14C3600AEDC83;
+			packageReferences = (
+				26CEE64526D1694200AEDC83 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				26CEE65B26D1CA0F00AEDC83 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 26CEE5F826D14C3600AEDC83 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -290,7 +338,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26CEE64D26D1BEDB00AEDC83 /* schema.json in Resources */,
 				26CEE60726D14C5300AEDC83 /* LaunchScreen.storyboard in Resources */,
+				26CEE64B26D1BE5A00AEDC83 /* ProductList.graphql in Resources */,
 				26CEE60426D14C5300AEDC83 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,21 +361,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		26CEE64826D1BC0A00AEDC83 /* Apollo */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Apollo;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"Configuration/schema.json\" Configuration/API.swift\n#\"${SCRIPT_PATH}\"/run-bundled-codegen.sh schema:download --endpoint=\"https://api.producthunt.com/v2/api/graphql?access_token=HJ8gAC2M5mjGQxw4fqwE2YFEtWNmJfszWmP6KtWy33s\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		26CEE5F326D14C3600AEDC83 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				26CEE63026D14ED900AEDC83 /* KNConstraints.swift in Sources */,
+				26CEE65A26D1C68100AEDC83 /* HomeInteractor.swift in Sources */,
 				26CEE62F26D14ED900AEDC83 /* KNView+KNController.swift in Sources */,
 				26CEE64426D15DB800AEDC83 /* KNTableExtension.swift in Sources */,
 				26CEE64026D159DE00AEDC83 /* KNControlConstruction.swift in Sources */,
 				26CEE63826D152B700AEDC83 /* HomeController.swift in Sources */,
+				26CEE65F26D1CA7F00AEDC83 /* KNUIImageExtension.swift in Sources */,
+				26CEE65126D1C02C00AEDC83 /* Network.swift in Sources */,
+				26CEE65826D1C65500AEDC83 /* ProductItemCell.swift in Sources */,
 				26CEE63A26D152DC00AEDC83 /* SearchController.swift in Sources */,
+				26CEE64F26D1C00000AEDC83 /* API.swift in Sources */,
 				26CEE63E26D159B900AEDC83 /* Fonts+Colors.swift in Sources */,
+				26CEE65426D1C2E100AEDC83 /* Product.swift in Sources */,
 				26CEE63626D150AA00AEDC83 /* MainTabController.swift in Sources */,
 				26CEE62E26D14ED900AEDC83 /* KNGeneral.swift in Sources */,
 				26CEE64226D15A2300AEDC83 /* KNUIButtonExtension.swift in Sources */,
+				26CEE65626D1C4ED00AEDC83 /* GetProductListWorker.swift in Sources */,
 				26CEE5FB26D14C3600AEDC83 /* AppDelegate.swift in Sources */,
 				26CEE63C26D1530500AEDC83 /* ActivitiesController.swift in Sources */,
 				26CEE5FD26D14C3600AEDC83 /* SceneDelegate.swift in Sources */,
@@ -653,6 +731,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		26CEE64526D1694200AEDC83 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.47.1;
+			};
+		};
+		26CEE65B26D1CA0F00AEDC83 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		26CEE64626D1694200AEDC83 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26CEE64526D1694200AEDC83 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		26CEE65C26D1CA0F00AEDC83 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26CEE65B26D1CA0F00AEDC83 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 26CEE5EF26D14C3600AEDC83 /* Project object */;
 }
