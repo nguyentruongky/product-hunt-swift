@@ -5,7 +5,7 @@ query productList($cursor: String) {
       node {
         id
         name
-        description
+        tagline
         isVoted
         votesCount
         thumbnail {

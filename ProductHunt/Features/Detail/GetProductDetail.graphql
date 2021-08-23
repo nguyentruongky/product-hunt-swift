@@ -32,14 +32,20 @@ query productDetail {
       edges {
         cursor
         node {
-          body
-          isVoted
-          user {
-            ...UserFragment
-          }
+          ...CommentFragment
         }
       }
     }
+  }
+}
+
+fragment CommentFragment on Comment {
+  body
+  votesCount
+  createdAt
+  isVoted
+  user {
+    ...UserFragment
   }
 }
 

@@ -11,6 +11,9 @@ struct GetProductDetailWorker {
                         return
                     }
                     
+                    let temp = raw.comments.edges[0].node.fragments.commentFragment
+                    temp
+                    
                     let product = ProductDetail(raw: raw)
                     onSuccess(product)
                 case .failure(let error):
