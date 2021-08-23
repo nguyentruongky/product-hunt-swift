@@ -6,6 +6,7 @@ class DetailController: KNController {
     lazy var tableView = UITableView(cells: [ProductItemCell.self], source: self)
     override var shouldGetDataViewDidLoad: Bool { true }
     let titleCell = ProductItemCell()
+    lazy var interactor = DetailInteractor(controller: self)
     
     var datasource = [UITableViewCell]() {
         didSet {
@@ -35,36 +36,50 @@ class DetailController: KNController {
     let actionCell = ActionButtonCell()
     let descriptionCell = DescriptionCell()
     let tagsCell = TagsCell()
+    let ownerCell = OwnerCell()
+    let promotedCell = PromotedCell()
     override func getData() {
-        let featuredCell = FeaturedCell()
-        let cells = [
-            mediaCell,
-            actionCell,
-            featuredCell,
-            descriptionCell,
-            tagsCell
-        ]
-                
-        let media = [
-            Media(type: .image, url: "https://ph-files.imgix.net/28dd4b89-e876-42bc-b005-8e3136cbddb9.png?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=635&h=380&fit=max&dpr=2"),
-            Media(type: .image, url: "https://ph-files.imgix.net/8fda5b92-eaab-4e28-a490-0cb08394af5a.png?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=635&h=380&fit=max&dpr=2"),
-            Media(type: .image, url: "https://ph-files.imgix.net/1ee0988e-f6df-4edc-88ce-cc36c1357124.png?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=635&h=380&fit=max&dpr=2")
-        ]
-        
-        tagsCell.setData(["PRODUCTIVITY", "EVENTS", "SOCIAL NETWORK", "IOS DEVELOPMENT"])
+        interactor.freshGetData()
+    }
+}
 
-        mediaCell.setData(media)
-        descriptionCell.setData("""
-            bloop is an in-IDE code search engine that retrieves relevant JS and TypeScript code examples from library documentation and open-source repos.
-            ⠀
-            See library function parameters, output, and error-handling - without going to Google.
-            Have a question about this product? Ask the Maker
-            """
-        )
+extension DetailController {
+    func updateUI(_ product: ProductDetail) {
+        var cells = [UITableViewCell]()
+        
+        mediaCell.setData(product.medias)
+        cells.append(mediaCell)
+        cells.append(actionCell)
+        if let featuredAt = product.featuredAt {
+            let featuredCell = FeaturedCell()
+            featuredCell.setData(featuredAt)
+            cells.append(featuredCell)
+        }
+
+        descriptionCell.setData(product.description)
+        cells.append(descriptionCell)
+        
+        tagsCell.setData(product.tags)
+        cells.append(tagsCell)
+        
+        ownerCell.setData(owners: [product.creator], makers: product.makers)
+        cells.append(ownerCell)
+        
+        cells.append(promotedCell)
+        
+        let commentCells = product.comments.map { CommentCell(comment: $0) }
+        cells.append(contentsOf: commentCells)
         
         datasource = cells
     }
+
+    func showError(message: String) {
+        let vc = UIAlertController(title: "Oops", message: message, preferredStyle: .alert)
+        vc.addAction(UIAlertAction(title: "OK", style: .destructive))
+        present(vc, animated: true)
+    }
 }
+
 extension DetailController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return datasource.count
