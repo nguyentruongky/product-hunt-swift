@@ -139,16 +139,67 @@
 		2600B6E926D21F1600593502 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				2600B6FA26D2F3CB00593502 /* CommentCell.swift */,
-				2600B6EC26D220C200593502 /* DetailCells.swift */,
-				2600B6EA26D21F2D00593502 /* DetailController.swift */,
-				2600B6FE26D33C0E00593502 /* DetailInteractor.swift */,
-				2600B6F026D22D2100593502 /* GetProductDetail.graphql */,
-				2600B6F426D22FC600593502 /* GetProductDetailWorker.swift */,
-				2600B6F626D2E9F600593502 /* MediaCell.swift */,
-				2600B6F226D22D9200593502 /* ProductDetail.swift */,
+				2600B70326D448F300593502 /* API+Model */,
+				2600B70426D4490200593502 /* Controller */,
+				2600B70226D448DB00593502 /* Views */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		2600B70226D448DB00593502 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2600B6FA26D2F3CB00593502 /* CommentCell.swift */,
+				2600B6EC26D220C200593502 /* DetailCells.swift */,
+				2600B6F626D2E9F600593502 /* MediaCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2600B70326D448F300593502 /* API+Model */ = {
+			isa = PBXGroup;
+			children = (
+				2600B6F026D22D2100593502 /* GetProductDetail.graphql */,
+				2600B6F426D22FC600593502 /* GetProductDetailWorker.swift */,
+				2600B6F226D22D9200593502 /* ProductDetail.swift */,
+			);
+			path = "API+Model";
+			sourceTree = "<group>";
+		};
+		2600B70426D4490200593502 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2600B6EA26D21F2D00593502 /* DetailController.swift */,
+				2600B6FE26D33C0E00593502 /* DetailInteractor.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2600B70526D4491200593502 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				26CEE65726D1C65500AEDC83 /* ProductItemCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2600B70626D4491B00593502 /* API+Model */ = {
+			isa = PBXGroup;
+			children = (
+				26CEE64A26D1BE5A00AEDC83 /* GetProductListWorker.graphql */,
+				26CEE65526D1C4ED00AEDC83 /* GetProductListWorker.swift */,
+				26CEE65326D1C2E100AEDC83 /* Product.swift */,
+			);
+			path = "API+Model";
+			sourceTree = "<group>";
+		};
+		2600B70726D4492200593502 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				26CEE63726D152B700AEDC83 /* HomeController.swift */,
+				26CEE65926D1C68100AEDC83 /* HomeInteractor.swift */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 		26CEE5EE26D14C3600AEDC83 = {
@@ -242,11 +293,11 @@
 		26CEE63426D1509500AEDC83 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				2600B6E926D21F1600593502 /* Detail */,
-				26CEE63526D150AA00AEDC83 /* MainTabController.swift */,
-				26CEE65226D1C2C100AEDC83 /* Home */,
-				26CEE63926D152DC00AEDC83 /* SearchController.swift */,
 				26CEE63B26D1530500AEDC83 /* ActivitiesController.swift */,
+				2600B6E926D21F1600593502 /* Detail */,
+				26CEE65226D1C2C100AEDC83 /* Home */,
+				26CEE63526D150AA00AEDC83 /* MainTabController.swift */,
+				26CEE63926D152DC00AEDC83 /* SearchController.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -254,12 +305,9 @@
 		26CEE65226D1C2C100AEDC83 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				26CEE64A26D1BE5A00AEDC83 /* GetProductListWorker.graphql */,
-				26CEE65526D1C4ED00AEDC83 /* GetProductListWorker.swift */,
-				26CEE63726D152B700AEDC83 /* HomeController.swift */,
-				26CEE65926D1C68100AEDC83 /* HomeInteractor.swift */,
-				26CEE65326D1C2E100AEDC83 /* Product.swift */,
-				26CEE65726D1C65500AEDC83 /* ProductItemCell.swift */,
+				2600B70626D4491B00593502 /* API+Model */,
+				2600B70726D4492200593502 /* Logic */,
+				2600B70526D4491200593502 /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
