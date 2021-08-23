@@ -3,15 +3,20 @@
 import UIKit
 
 class DetailController: KNController {
-    lazy var tableView = UITableView(cells: [ProductItemCell.self], source: self)
+    private lazy var interactor = DetailInteractor(controller: self)
+    private lazy var tableView = UITableView(cells: [ProductItemCell.self], source: self)
     override var shouldGetDataViewDidLoad: Bool { true }
-    let titleCell = ProductItemCell()
-    lazy var interactor = DetailInteractor(controller: self)
-    
+    var productId: String?
+
     var datasource = [UITableViewCell]() {
         didSet {
             tableView.reloadData()
         }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.backButtonTitle = ""
     }
 
     override func setupView() {
@@ -19,7 +24,7 @@ class DetailController: KNController {
         setupNavigationBar()
         setupTableView()
     }
-    
+
     func setupNavigationBar() {
         navigationController?.navigationBar.barTintColor = .color_201F24
         navigationController?.navigationBar.isTranslucent = false
@@ -39,14 +44,15 @@ class DetailController: KNController {
     let ownerCell = OwnerCell()
     let promotedCell = PromotedCell()
     override func getData() {
-        interactor.freshGetData()
+        guard let id = productId else { return }
+        interactor.freshGetData(productId: id)
     }
 }
 
 extension DetailController {
     func updateUI(_ product: ProductDetail) {
         var cells = [UITableViewCell]()
-        
+
         mediaCell.setData(product.medias)
         cells.append(mediaCell)
         cells.append(actionCell)
@@ -58,18 +64,18 @@ extension DetailController {
 
         descriptionCell.setData(product.description)
         cells.append(descriptionCell)
-        
+
         tagsCell.setData(product.tags)
         cells.append(tagsCell)
-        
+
         ownerCell.setData(owners: [product.creator], makers: product.makers)
         cells.append(ownerCell)
-        
+
         cells.append(promotedCell)
-        
+
         let commentCells = product.comments.map { CommentCell(comment: $0) }
         cells.append(contentsOf: commentCells)
-        
+
         datasource = cells
     }
 
@@ -84,16 +90,16 @@ extension DetailController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return datasource.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return datasource[indexPath.row]
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+
     }
 }

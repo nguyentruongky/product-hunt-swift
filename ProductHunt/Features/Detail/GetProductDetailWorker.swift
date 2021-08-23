@@ -2,18 +2,16 @@
 
 import Foundation
 struct GetProductDetailWorker {
+    let productId: String
     func execute(onSuccess: @escaping(ProductDetail) -> Void, onFailure: @escaping(Error) -> Void) {
-        Network.shared.apollo.fetch(query: ProductDetailQuery()) { result in
+        Network.shared.apollo.fetch(query: ProductDetailQuery(id: productId)) { result in
             switch result {
                 case .success(let detailRaw):
                     guard let raw = detailRaw.data?.post else {
                         onFailure(NSError(domain: "No data", code: -1, userInfo: nil))
                         return
                     }
-                    
-                    let temp = raw.comments.edges[0].node.fragments.commentFragment
-                    temp
-                    
+
                     let product = ProductDetail(raw: raw)
                     onSuccess(product)
                 case .failure(let error):

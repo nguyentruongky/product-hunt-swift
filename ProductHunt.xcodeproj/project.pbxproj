@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2600B6EB26D21F2D00593502 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B6EA26D21F2D00593502 /* DetailController.swift */; };
+		2600B6ED26D220C200593502 /* DetailCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B6EC26D220C200593502 /* DetailCells.swift */; };
+		2600B6EF26D224ED00593502 /* KNCollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B6EE26D224ED00593502 /* KNCollectionExtension.swift */; };
+		2600B6F126D22D2100593502 /* GetProductDetail.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 2600B6F026D22D2100593502 /* GetProductDetail.graphql */; };
+		2600B6F326D22D9200593502 /* ProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B6F226D22D9200593502 /* ProductDetail.swift */; };
+		2600B6F526D22FC600593502 /* GetProductDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B6F426D22FC600593502 /* GetProductDetailWorker.swift */; };
+		2600B6F726D2E9F600593502 /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B6F626D2E9F600593502 /* MediaCell.swift */; };
+		2600B6FB26D2F3CB00593502 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B6FA26D2F3CB00593502 /* CommentCell.swift */; };
+		2600B6FD26D33A1C00593502 /* KNDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B6FC26D33A1C00593502 /* KNDateExtension.swift */; };
+		2600B6FF26D33C0E00593502 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600B6FE26D33C0E00593502 /* DetailInteractor.swift */; };
 		26CEE5FB26D14C3600AEDC83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE5FA26D14C3600AEDC83 /* AppDelegate.swift */; };
 		26CEE5FD26D14C3600AEDC83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CEE5FC26D14C3600AEDC83 /* SceneDelegate.swift */; };
 		26CEE60426D14C5300AEDC83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26CEE60326D14C5300AEDC83 /* Assets.xcassets */; };
@@ -55,6 +65,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2600B6EA26D21F2D00593502 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		2600B6EC26D220C200593502 /* DetailCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCells.swift; sourceTree = "<group>"; };
+		2600B6EE26D224ED00593502 /* KNCollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KNCollectionExtension.swift; sourceTree = "<group>"; };
+		2600B6F026D22D2100593502 /* GetProductDetail.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetProductDetail.graphql; sourceTree = "<group>"; };
+		2600B6F226D22D9200593502 /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
+		2600B6F426D22FC600593502 /* GetProductDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductDetailWorker.swift; sourceTree = "<group>"; };
+		2600B6F626D2E9F600593502 /* MediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
+		2600B6FA26D2F3CB00593502 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		2600B6FC26D33A1C00593502 /* KNDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNDateExtension.swift; sourceTree = "<group>"; };
+		2600B6FE26D33C0E00593502 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		26CEE5F726D14C3600AEDC83 /* ProductHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26CEE5FA26D14C3600AEDC83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26CEE5FC26D14C3600AEDC83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +136,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2600B6E926D21F1600593502 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				2600B6FA26D2F3CB00593502 /* CommentCell.swift */,
+				2600B6EC26D220C200593502 /* DetailCells.swift */,
+				2600B6EA26D21F2D00593502 /* DetailController.swift */,
+				2600B6FE26D33C0E00593502 /* DetailInteractor.swift */,
+				2600B6F026D22D2100593502 /* GetProductDetail.graphql */,
+				2600B6F426D22FC600593502 /* GetProductDetailWorker.swift */,
+				2600B6F626D2E9F600593502 /* MediaCell.swift */,
+				2600B6F226D22D9200593502 /* ProductDetail.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		26CEE5EE26D14C3600AEDC83 = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +204,7 @@
 		26CEE62A26D14ED900AEDC83 /* BasicKit */ = {
 			isa = PBXGroup;
 			children = (
+				2600B6FC26D33A1C00593502 /* KNDateExtension.swift */,
 				26CEE65E26D1CA7F00AEDC83 /* KNUIImageExtension.swift */,
 				26CEE64326D15DB800AEDC83 /* KNTableExtension.swift */,
 				26CEE64126D15A2300AEDC83 /* KNUIButtonExtension.swift */,
@@ -177,6 +213,7 @@
 				26CEE62B26D14ED900AEDC83 /* KNGeneral.swift */,
 				26CEE62C26D14ED900AEDC83 /* KNView+KNController.swift */,
 				26CEE62D26D14ED900AEDC83 /* KNConstraints.swift */,
+				2600B6EE26D224ED00593502 /* KNCollectionExtension.swift */,
 			);
 			path = BasicKit;
 			sourceTree = "<group>";
@@ -205,6 +242,7 @@
 		26CEE63426D1509500AEDC83 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				2600B6E926D21F1600593502 /* Detail */,
 				26CEE63526D150AA00AEDC83 /* MainTabController.swift */,
 				26CEE65226D1C2C100AEDC83 /* Home */,
 				26CEE63926D152DC00AEDC83 /* SearchController.swift */,
@@ -216,12 +254,12 @@
 		26CEE65226D1C2C100AEDC83 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				26CEE64A26D1BE5A00AEDC83 /* GetProductListWorker.graphql */,
 				26CEE65526D1C4ED00AEDC83 /* GetProductListWorker.swift */,
 				26CEE63726D152B700AEDC83 /* HomeController.swift */,
 				26CEE65926D1C68100AEDC83 /* HomeInteractor.swift */,
 				26CEE65326D1C2E100AEDC83 /* Product.swift */,
 				26CEE65726D1C65500AEDC83 /* ProductItemCell.swift */,
-				26CEE64A26D1BE5A00AEDC83 /* GetProductListWorker.graphql */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -341,6 +379,7 @@
 				26CEE64D26D1BEDB00AEDC83 /* schema.json in Resources */,
 				26CEE60726D14C5300AEDC83 /* LaunchScreen.storyboard in Resources */,
 				26CEE64B26D1BE5A00AEDC83 /* GetProductListWorker.graphql in Resources */,
+				2600B6F126D22D2100593502 /* GetProductDetail.graphql in Resources */,
 				26CEE60426D14C5300AEDC83 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,13 +427,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				26CEE63026D14ED900AEDC83 /* KNConstraints.swift in Sources */,
+				2600B6EB26D21F2D00593502 /* DetailController.swift in Sources */,
+				2600B6F726D2E9F600593502 /* MediaCell.swift in Sources */,
+				2600B6F526D22FC600593502 /* GetProductDetailWorker.swift in Sources */,
+				2600B6F326D22D9200593502 /* ProductDetail.swift in Sources */,
 				26CEE65A26D1C68100AEDC83 /* HomeInteractor.swift in Sources */,
 				26CEE62F26D14ED900AEDC83 /* KNView+KNController.swift in Sources */,
+				2600B6ED26D220C200593502 /* DetailCells.swift in Sources */,
 				26CEE64426D15DB800AEDC83 /* KNTableExtension.swift in Sources */,
+				2600B6FF26D33C0E00593502 /* DetailInteractor.swift in Sources */,
 				26CEE64026D159DE00AEDC83 /* KNControlConstruction.swift in Sources */,
+				2600B6EF26D224ED00593502 /* KNCollectionExtension.swift in Sources */,
 				26CEE63826D152B700AEDC83 /* HomeController.swift in Sources */,
+				2600B6FD26D33A1C00593502 /* KNDateExtension.swift in Sources */,
 				26CEE65F26D1CA7F00AEDC83 /* KNUIImageExtension.swift in Sources */,
 				26CEE65126D1C02C00AEDC83 /* Network.swift in Sources */,
+				2600B6FB26D2F3CB00593502 /* CommentCell.swift in Sources */,
 				26CEE65826D1C65500AEDC83 /* ProductItemCell.swift in Sources */,
 				26CEE63A26D152DC00AEDC83 /* SearchController.swift in Sources */,
 				26CEE64F26D1C00000AEDC83 /* API.swift in Sources */,

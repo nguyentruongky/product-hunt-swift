@@ -8,8 +8,8 @@ public final class ProductDetailQuery: GraphQLQuery {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =
     """
-    query productDetail {
-      post(id: "309281") {
+    query productDetail($id: ID!) {
+      post(id: $id) {
         __typename
         collections(first: 3) {
           __typename
@@ -70,7 +70,14 @@ public final class ProductDetailQuery: GraphQLQuery {
     return document
   }
 
-  public init() {
+  public var id: GraphQLID
+
+  public init(id: GraphQLID) {
+    self.id = id
+  }
+
+  public var variables: GraphQLMap? {
+    return ["id": id]
   }
 
   public struct Data: GraphQLSelectionSet {
@@ -78,7 +85,7 @@ public final class ProductDetailQuery: GraphQLQuery {
 
     public static var selections: [GraphQLSelection] {
       return [
-        GraphQLField("post", arguments: ["id": "309281"], type: .object(Post.selections)),
+        GraphQLField("post", arguments: ["id": GraphQLVariable("id")], type: .object(Post.selections)),
       ]
     }
 

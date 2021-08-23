@@ -9,8 +9,9 @@ class DetailInteractor {
         self.controller = controller
     }
     
-    func freshGetData() {
-        GetProductDetailWorker().execute(onSuccess: { [weak self] product in
+    func freshGetData(productId: String) {
+        print("productId: \(productId)")
+        GetProductDetailWorker(productId: productId).execute(onSuccess: { [weak self] product in
             self?.controller?.updateUI(product)
         }, onFailure: { [weak self] error in
             self?.controller?.showError(message: error.localizedDescription)

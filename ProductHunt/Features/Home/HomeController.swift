@@ -85,7 +85,9 @@ extension HomeController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        let vc = DetailController()
+        vc.productId = datasource[indexPath.row].id
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

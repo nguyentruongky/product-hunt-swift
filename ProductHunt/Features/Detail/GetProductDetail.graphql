@@ -1,5 +1,5 @@
-query productDetail {
-  post(id: "309281") {
+query productDetail($id: ID!) {
+  post(id: $id) {
     collections(first: 3) {
       edges {
         node {
